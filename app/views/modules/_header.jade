@@ -1,0 +1,63 @@
+mixin header
+
+  section.container.relative
+    .top-left.z-index-10
+      .bg-white.pl-20.pr-20.pt-20.pb-20
+        img(src='assets/images/logo/afx2-black.png', data-src-retina='assets/images/logo/afx2-black.png', alt='', style='height:32px')
+
+  // BEGIN HEADER
+  nav.header.bottom.bg-header.light-solid(data-pages='header', data-pages-autofixed='true')
+    // BEGIN WHITE BRUSH STROKE
+    .brush.bottom-left(data-pages-bg-image='assets/images/brush_stroke.png')
+    // END WHITE BRUSH STROKE
+    .container.relative
+      // BEGIN LEFT CONTENT
+      .pull-left
+        //
+          .header-inner
+          Allows to horizontally Align elements to the Center
+        .header-inner
+          // BEGIN LOGO
+          img(src='assets/images/logo/afx-black.png', data-src-retina='assets/images/logo/afx-black.png', alt='', style='height:40px')
+      .pull-right
+        .header-inner
+          .visible-sm-inline.visible-xs-inline.menu-toggler.pull-right.pl-10(data-pages='header-toggle', data-pages-element='#header')
+            .one
+            .two
+            .three
+      // BEGIN RIGHT CONTENT
+      #header.menu-content.pull-right.clearfix(data-pages='menu-content', data-pages-direction='slideRight')
+        // BEGIN HEADER CLOSE TOGGLE FOR MOBILE
+        .pull-right
+          a.text-black.link.padding-10.visible-xs-inline.visible-sm-inline.pull-right.mt-10.mb-10.mr-10(href='#', data-pages='header-toggle', data-pages-element='#header')
+            i.pg-close_line
+        // END HEADER CLOSE TOGGLE FOR MOBILE
+        // BEGIN MENU ITEMS
+        .header-inner
+          ul.menu
+            li
+              a.active(href='#', data-text='Home')
+                b Home 
+                span(data-text='Welcome') Welcome
+            li.classic.multiline
+              a(href='#', data-text='Elements')
+                b About 
+                span(data-text='Our Story') Our Story
+            li
+              a(href='#', data-text='Pricing')
+                b Team
+                span(data-text='Our Family') Our Family
+            li
+              a(href='#', data-text='Portofolio')
+                b Portofolio 
+                span(data-text='Clients') Clients
+            li
+              a(href='#', data-text='Contact Us')
+                b Contact
+                span(data-text='Get in touch') Get in touch 
+          // BEGIN COPYRIGHT FOR MOBILE
+          .ml-35.mr-35.mb-20.mt-20.visible-sm.visible-xs
+            p.fs-11.small-text.muted Copyright © 2016 Arteffects International
+          // END COPYRIGHT FOR MOBILE
+        // END MENU ITEMS
+  // END HEADER

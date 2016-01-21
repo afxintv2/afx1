@@ -1,0 +1,224 @@
+$icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+// bower:scss
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../../bower_components/lightingfly/_lighting_fly.scss";
+// endbower
+
+@import 'pages/pages';
+@import 'modules/easing';
+@import 'modules/gradients';
+@import 'modules/social';
+@import 'modules/mdc-class';
+
+.btn-accent {
+  background: $color-accent;
+}
+
+// PRELOAD
+body:before {
+  display: none;
+
+  content: url('#{$base-img-url}/black.svg') url('#{$base-img-url}/white.svg');
+}
+
+body {
+  background: #fff;
+}
+
+// MENU ACTIVE
+$pages: 'index', 'music', 'profile', 'contact';
+
+@each $page in $pages {
+  #page-#{$page} a[data-body="#{$page}"] {
+    @extend .active;
+  }
+}
+
+.col-center {
+  float: none;
+  margin: 0 auto;
+}
+
+// ======================================================
+// TYPOGRAPHY
+// ======================================================
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &.big {
+    text-transform: uppercase;
+    font-family: $font-gotham;
+    font-size: 60px;
+    font-weight: 900;
+    letter-spacing: -.05em;
+  }
+}
+
+.enddot {
+  &:after {
+    content: ".";
+    color: $color-accent;
+    font-family: $heading-font-family;
+    font-size: 2em;
+    line-height: 1rem;
+  }
+}
+
+.enddot-white {
+  @extend .enddot;
+
+  &:after {
+    color: #fff;
+  }
+}
+
+hr.div {
+  border-width: 2px;
+  width: 60px;
+}
+
+hr.div-left {
+  @extend hr.div;
+  margin-left: 0;
+}
+
+hr.div-right {
+  @extend hr.div;
+  margin-right: 0;
+}
+
+hr.div-accent {
+  @extend hr.div;
+  border-color: $color-accent;
+}
+
+hr.div-white {
+  @extend hr.div;
+  border-color: #fff;
+}
+
+.excerpt {
+  letter-spacing: -.02em;
+
+  font-weight: 200;
+}
+
+section p {
+  margin: 1.5em 0;
+
+  font-size: 1.3rem;
+  font-weight: 200;
+  line-height: 1.6;
+
+  &.dropcap:first-child:first-letter {
+    float: left;
+
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+
+    font-family: Georgia;
+    font-size: 75px;
+    line-height: 60px;
+  }
+}
+
+section p.excerpt {
+  font-size: 2.4em;
+  line-height: 1;
+
+  &.big {
+    font-size: 2.6em;
+  }
+}
+
+i:not(.fa):not([class^="pg-"]):not([class^="icon-"]):not([class^="ti-"]),
+em {
+  font-family: $font-playfair;
+  font-weight: 400;
+  // font-style: italic;
+}
+
+.block-title {
+  letter-spacing: .15em;
+
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.slab-border {
+  border-width: 4px 0;
+  border-style: solid;
+}
+
+.slab {
+  // font-weight: 900;
+  text-transform: uppercase;
+
+  font-family: 'LeagueGothic', $base-font-family;
+  .slabtext {
+    line-height: .85 !important;
+  }
+}
+
+// ======================================================
+// Links
+// ======================================================
+
+@mixin linkAnim($thickness: 2px, $color: #fff) {
+  line-height: 1;
+
+  &:after {
+    // position: absolute;
+    bottom: 0;
+
+    display: block;
+
+    width: 0;
+    height: $thickness;
+    margin-top: 3px;
+
+    content: "";
+    transition: all .3s $easeOutExpo;
+
+    background: $color;
+  }
+
+  &:hover,
+  &.active {
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+.brush {
+  width: 100%;
+  height: 170px;
+  background-repeat: repeat;
+  background-size: initial;
+  margin-bottom: 55px;
+}
+
+
+// ======================================================
+// Footer
+// ======================================================
+
+footer {
+  .social-list {
+    a {
+      color: #fff;
+      opacity: .5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

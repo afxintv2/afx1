@@ -1,0 +1,43 @@
+{
+  "name": "afxgulp",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "~3.3.6",
+    "jquery": "~2.2.0",
+    "lightingfly": "~0.2.1",
+    "jquery.fitvids": "fitvids#~1.1.0",
+    "velocity": "~1.2.3",
+    "jquery-unveil": "~1.3.0",
+    "jquery_appear": "~0.3.6",
+    "waitForImages": "~2.1.0",
+    "isotope": "~2.2.2",
+    "jquery-unorphanize": "~1.0.1",
+    "jquery-validation": "~1.14.0",
+    "bootstrap": "~3.3.6",
+    "color-thief": "~2.0.1",
+    "moment": "~2.11.1",
+    "vimeo-jquery-api": "~0.10.1",
+    "slabText": "~2.2.0",
+    "fastclick": "~1.0.6",
+    "jQuery-FontSpy": "fontspy#~3.0.0",
+    "jquery.countdown": "~2.1.0",
+    "owl.carousel": "~2.0.0-beta.3"
+  },
+  "overrides": {
+    "isotope": {
+      "main": "dist/isotope.pkgd.js",
+      "dependencies": {}
+    },
+    "vimeo-jquery-api": {
+      "main": "dist/jquery.vimeo.api.js",
+      "dependencies": {}
+    },
+    "slabText": {
+      "main": [
+        "js/jquery.slabtext.js",
+        "css/slabtext.css"
+      ],
+      "dependencies": {}
+    }
+  }
+}

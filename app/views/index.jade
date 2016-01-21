@@ -1,0 +1,55 @@
+include modules/_header
+include modules/_footer
+
+extends layouts/_default
+
+block vars
+  - var pageId = 'index';
+
+block content
+
+  section.jumbotron.full-vh(data-pages='parallax')
+    .inner.full-height
+      // BEGIN SLIDER
+      #hero.swiper-container
+        .swiper-wrapper
+          // BEGIN SLIDE
+          .swiper-slide.fit.bg-complete
+            // BEGIN IMAGE PARRALAX
+            .slider-wrapper
+              .image(data-swiper-parallax='30%')
+                .full-height.bg-position-center(data-pages-bg-image='assets/images/phone.jpg', data-bg-overlay-class='bg-white', data-overlay-opacity='0.5')
+            // END IMAGE PARRALAX
+            // BEGIN CONTENT
+            .content-layer
+              .full-height
+                .container-xs-height.full-height
+                  .col-xs-height.col-middle.text-left
+                    .container.text-center
+                    
+                      h6.block-title.mb-0.text-master.hint-text
+                        | Discover
+                        
+                      hr.div-accent.mt-30.mb-30
+                      
+                      h2.col-sm-8.col-center.mt-15.light.text-master.enddot
+                        | Arteffects International is a <b>digital design collective &amp; production house,</b> with experiences in <b>film scoring, artwork design, and media productions</b>
+            // END CONTENT
+          // END SLIDE
+    // END SLIDER
+
+
+  //- WHO WE ARE
+
+  section.pt-100.pb-100(data-pages='parallax', data-pages-bg-image='assets/images/coffee.jpg', data-bg-overlay-class='bg-master', data-overlay-opacity='0.7')
+    .container
+      .col-sm-8.col-center.text-center.text-white
+        h6.block-title.uppercase We are driven by creativity.
+        h1.enddot Who We Are
+
+
+  //- OUR TEAM
+  
+  include modules/_sec_team
+  
+  .clearfix

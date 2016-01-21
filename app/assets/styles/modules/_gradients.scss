@@ -1,0 +1,20 @@
+@mixin add-gradient($dir, $from, $to) {
+  position: relative;
+
+  &:after {
+    content: ' ';
+    background-image: linear-gradient($dir, $from, $to);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 0;
+    opacity: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 10;
+  }
+}
